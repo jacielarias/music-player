@@ -1,0 +1,208 @@
+/* Common */
+*{
+    box-sizing: border-box;
+  };
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: lighgray;
+    overflow: hidden;
+    background-color: rgb(21, 22, 31);
+}
+
+.main-content{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.music-content{
+    height: 100%;
+    width: 70%;
+    position: relative;
+}
+
+.music-content::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.music{
+    /*background-image: linear-gradient(rgb(145, 141, 163), rgb(149, 158, 134));*/
+    color: white;
+    width: 100%;
+    height: 410px;
+    overflow-y: auto;
+    scrollbar-color: darkgray black;
+    position: absolute;
+    bottom: 2%;
+    right: 0;
+    z-index: 999;
+}
+
+.music::-webkit-scrollbar {
+    width:0; 
+    background-color: black; 
+}
+
+.music::-webkit-scrollbar-track {
+    background-color: rgb(21, 22, 31); 
+}
+  
+  
+.music::-webkit-scrollbar-thumb {
+    background-color: rgb(31, 32, 48); /* Color de la barra de desplazamiento */
+    border-radius: 4px; /* Borde redondeado de la barra */
+}
+
+.background{
+    object-fit: contain;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    position: absolute;
+}
+
+/* Player */
+.player {
+    height: 100%;
+    width: 30%;
+    padding: 5rem 2rem;
+    color: white;
+}
+
+/* Title */
+.title {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Cover */
+.cover {
+    width: 128px;
+    height: auto;
+    border-radius: .3rem;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Progress */
+.progress-container {
+    height: .3rem;
+    width: 100%;
+    background-color: lightgray;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    background-color: goldenrod;
+    width: 0;
+    height: 100%;
+}
+
+/* Controls */
+.control-section{
+    width: 100%;
+    background-color: rgb(38, 40, 53);
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    z-index: 999;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    height: 50%;
+    padding: 0 30%;
+}
+
+.controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.controls i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+#volume-bar {
+  width: 200px;
+  height: 10px;
+  background-color: #ccc;
+  position: absolute;
+  left: 10%;
+  transform: translateY(-50%, -50%);
+  top:50%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#volume-slider {
+  width: 10px;
+  height: 10px;
+  background-color: goldenrod;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 5px;
+}
+
+/* Songs */
+.songs {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+}
+
+.songs li {
+    text-decoration: none;
+    width: 100%;
+    padding: 2rem 5rem ;
+    border-bottom: 1px solid #ccc;
+}
+
+.songs a {
+    text-decoration: none;
+    background: linear-gradient(180deg, rgba(255, 215, 0, 1), rgba(255, 165, 0, 0.5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Transiciones para suavizar el cambio de opacidad */
+    transition: color 0.3s;
+}
+
+.songs a:hover {
+    /* Volver al gradiente original en el hover */
+    background: linear-gradient(180deg, rgba(255, 215, 0, 1), rgba(255, 165, 0, 0.5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.songs a:hover{
+    color: #c5c5c5;
+}
+
+.songs a.active {
+    color: white;
+    font-weight: bold;
+}
