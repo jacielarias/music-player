@@ -15,19 +15,23 @@
 
     <div class="main-content">
     <!-- Player -->
-        <div class="player section section-1">
-            <!-- Title -->
-            <h1 class="title" id="title">BackWards - Cannons</h1>
-            <!-- Cover -->
-            <img src="img/img-1.jpg" alt="" class="cover" id="cover">
-            <!-- Audio HTML Media elememt -->
-            <audio src="" id="audio"></audio>
-        </div>
+        <aside class="player section section-1">
+        </aside>
 
         <div class="music-content">
             <img class="background" src="./img/background.jpg" alt="">
+            
+            <section class="player-top-section">
+                <!-- Cover -->
+                <img src="img/img-1.jpg" alt="" class="cover-top">
+                <!-- Title -->
+                <h1 class="title-top" id="title-top">BackWards - Cannons</h1>
+                    <!-- Audio HTML Media elememt -->
+                <audio src="" id="audio"></audio>
+            </section>
+
+            <!-- Song list -->
             <section class="music section">
-                <!-- Song list -->
             <ul class="songs" id="songs">
                 <!-- <li><a href="#">Song 1</a></li>
                 <li><a class="active" href="#">Song 2</a></li>
@@ -38,25 +42,37 @@
     </div>
     
     <section class="control-section">
-        <!-- Progress bar -->
-        <div id="progress-container" class="progress-container">
-            <section id="progress" class="progress"></section>
-        </div>
 
         <!-- Controls -->
         <section class="controls">
-            <button class="prev">
-                <i id="prev" class="fas fa-backward"></i>
-            </button>
-            <button class="play">
-                <i id="play" class="fas fa-play"></i>
-            </button>
-            <button class="next">
-                <i id="next" class="fas fa-forward"></i>
-            </button>
+            <div class="content-controls">
+                <button class="prev">
+                    <i id="prev" class="fas fa-backward"></i>
+                </button>
+                <button class="play">
+                    <i id="play" class="fas fa-play"></i>
+                </button>
+                <button class="next">
+                    <i id="next" class="fas fa-forward"></i>
+                </button>
+            </div>
 
-            <div id="volume-bar">
-                <div id="volume-slider"></div>
+                <!-- Progress bar -->
+            <div id="progress-container" class="progress-container">
+                <section id="progress" class="progress"></section>
+                <div class="time">
+                    <p class="actualTime time-song-actualtime">0:00</p>
+                    <p class="duration time-song-duration">0:00</p>
+                </div>
+            </div>
+
+            <!-- Volume -->
+            <div class="volume">
+                <i class="sound-icon fas fa-volume-up" style="color: #fff; font-size: 0.9rem;">
+                </i>    
+                <div class="volume-bar">
+                    <div class="volume-slider"></div>
+                </div>
             </div>
         </section>
     </section>
